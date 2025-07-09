@@ -70,4 +70,24 @@ This project uses the modern CSS @layer feature to organize styles more clearly 
 - Makes CSS easier to read, maintain, and scale
 - Lets the browser know the order of importance, so one style doesn't accidentally override another
 
-> Instead of relying only on the order of your CSS file, `@layer` gives more control over the cascade, especially in larger projects or when combining multiple style sources.
+> Instead of relying only on the order of CSS file, `@layer` gives more control over the cascade, especially in larger projects or when combining multiple style sources.
+
+### 🔤 Self-hosting Google Fonts with Webfonts Helper
+
+Instead of linking to Google Fonts using a remote URL, this project uses Google Webfonts Helper to download and self-host font files locally.
+
+✅ Why I did this:
+
+- Faster loading: Fonts are served directly from my own site
+- More privacy-friendly: No external requests to Google Fonts
+- Better control: I can choose exactly which font weights and subsets I need
+
+🛠 How I did it:
+
+1. Went to [Google Webfonts Helper](https://gwfh.mranftl.com/fonts)
+2. Selected the font and styles used in the design
+3. Downloaded the .woff / .woff2 files and placed them in a fonts folder
+4. Copied the generated @font-face CSS into my main stylesheet
+5. Used the font in my project like any other custom font
+
+> This method improves performance and aligns with best practices for font loading.
