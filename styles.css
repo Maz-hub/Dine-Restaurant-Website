@@ -1,5 +1,43 @@
+@layer color {
+    :root {
+        --c-Beaver: #9e7f66;
+        --c-Cod-Gray: #111111;
+        --c-Mirage: #17192b;
+        --c-Ebony-Clay: #242b37;
+        --c-Shuttle-Gray: #5c6779;
+        --c-White: #ffffff;
+
+        --color-background-dark: var(--c-Cod-Gray);
+        --color-text-light: var(--c-White);
+    }
+}
+
 @layer global {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--color-background-dark);
+        color: var(--color-text-light);
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
     }
 }
